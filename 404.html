@@ -1,8 +1,8 @@
 <script>
-    const redirect = () => {
-      const pathname = window.location.pathname;
-      const base = '/impact';
-      window.location.href = base + '/index.html';
-    };
-    redirect();
+  const redirectToIndex = () => {
+    const pathname = window.location.pathname;
+    const base = "/impact"; // Update to your `basename`
+    window.location.href = `${base}/index.html`;
+  };
+  redirectToIndex();
 </script>
