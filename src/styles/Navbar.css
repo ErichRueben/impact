@@ -1,0 +1,96 @@
+.navbar {
+    height: 96vh;
+    background-color: #ffffff;
+    border-right: 2px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+.navbar.collapsed {
+  width: 50px;
+}
+
+.navbar.expanded {
+  width: 200px;
+}
+  
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-links li {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #7a7a7a;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #7a7a7a;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links span {
+  display: flex;
+  text-decoration: none;
+  color: #7a7a7a;
+  padding: 0.75rem;
+  align-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #000;
+}
+
+.navbar-links a::selection {
+  color: #000;
+}
+
+.navbar-links .toggle:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.navbar-links a:hover span {
+  color: inherit;
+}
+
+.navbar-links svg {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.navbar.collapsed .navbar-links span {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar.expanded .navbar-links span {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
