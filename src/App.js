@@ -8,7 +8,7 @@ import './App.css'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/impact">
       <div style={ { display: 'flex' } }>
         <Navbar></Navbar>
         <div style={ { flex: '1', transition: 'margin-left 0.3s' } }>
