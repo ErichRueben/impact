@@ -1,0 +1,76 @@
+button,
+.btn-primary {
+    color: #f44336;
+    background-color: white;
+    border: 1px solid #f44336;
+    border-radius: 0.5rem;
+    font-family: 'Sarabun', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn-primary:hover {
+    background-color: rgba(196, 28, 19, 0.2); /* Hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
+    transform: translateY(-2px); /* Lift on hover */
+}
+
+button:active,
+.btn-primary:active {
+    background-color: #fce4e4; /* Subtle light red for active state */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inset shadow */
+    transform: translateY(1px); /* Pressed effect */
+}
+
+button:disabled,
+.btn-primary:disabled {
+    color: #aaa; /* Light gray text */
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Subtle border */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    box-shadow: none; /* Remove shadow for disabled buttons */
+    transform: none; /* Remove hover/active transform */
+}
+
+button,
+.btn-secondary {
+    color: #333; /* Neutral text color */
+    background-color: white; /* Light gray background */
+    border: 1px solid #ccc; /* Subtle gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-family: 'Sarabun', Helvetica, Arial, sans-serif; /* Consistent font */
+    font-size: 1rem; /* Standard font size */
+    font-weight: 600; /* Semi-bold text */
+    padding: 0.5rem 1.5rem; /* Padding for a balanced look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+button:hover,
+.btn-secondary:hover {
+    background-color: #d6d6d6; /* Darker gray on hover */
+    border-color: #bbb; /* Slightly darker border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+button:active,
+.btn-secondary:active {
+    background-color: #c4c4c4; /* Even darker gray for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle pressed shadow */
+    transform: translateY(1px); /* Pressed effect */
+}
+
+@media (max-width: 768px) {
+    button,
+    .btn-secondary {
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+        padding: 0.6rem 1.2rem; /* Adjust padding for smaller screens */
+    }
+}

@@ -12,9 +12,10 @@ const TaskColumn = ( { id, title, tasks } ) => {
     return (
         <div ref={ setNodeRef } className="task-column">
             <h2>{ title }</h2>
-            <SortableContext items={ tasks }>
+            <div className="header-divider"></div>
+            <SortableContext items={ tasks.map( ( task ) => task.id )}>
                 { ( tasks || [] ).map( ( task ) =>
-                    <TaskItem key={ task.id } id={ task.id } task={ task } />
+                    <TaskItem key={ task.id } id={ task.id } task={ task }/>
                 ) }
             </SortableContext>
         </div>
@@ -37,19 +38,23 @@ const TaskItem = ( { id, task } ) => {
             { ...listeners }
             { ...attributes }
         >
-            <strong>{ task.task }</strong>
-            <p>{ task.description }</p>
-            <small>Client: { task.client }</small>
+            <div className="task-content">
+                <strong>{ task.task }</strong>
+                <p>{ task.description }</p>
+                <small>{ task.client }</small>
+                <span className="divider">|</span>
+                <small>{ task.project }</small>
+            </div>
         </div>
     )
 }
 
 const TaskManager = () => {
     const [ tasks, setTasks ] = useState( {
-        "do": [],
-        "progress": [],
-        "review": [],
-        "completed": [],
+        pending: [],
+        developing: [],
+        testing: [],
+        completed: [],
     } );
 
     const [ showModal, setShowModal ] = useState( false );
@@ -104,7 +109,7 @@ const TaskManager = () => {
     
         setTasks( ( prev ) => ( {
           ...prev,
-          do: [ ...prev.do, newTask ],
+          pending: [ ...prev.pending, newTask ],
         } ) );
     };
 
@@ -113,10 +118,10 @@ const TaskManager = () => {
             <h1>Task Manager</h1>
 
             <div className="task-header">
-                <span>An interactive way to manage all your Saas projects!</span>
-                <Button variant="primary" onClick={ () => setShowModal( true ) }>
+                <span>An interactive way to manage all your SaaS projects!</span>
+                <button className="btn-primary" onClick={ () => setShowModal( true ) }>
                     Add Task
-                </Button>
+                </button>
             </div>
 
             <div className='task-container'>
