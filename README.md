@@ -10,7 +10,7 @@ This is a React-based frontend application that provides a template for a task m
 ### Clone the repository:
 ```sh
 git clone https://github.com/ErichRueben/impact.git
-cd your-repo
+cd impact
 ```
 
 ### Install dependencies
